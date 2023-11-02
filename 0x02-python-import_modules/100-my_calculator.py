@@ -2,11 +2,11 @@
 if __name__ == "__main__":
     import sys
     from calculator_1 import add, sub, mul, div
-    lenArg = len(sys.argv)
+    lenArg = (len(sys.argv)[1:])
     operator = (sys.argv)[2]
     a = int((sys.argv)[1])
     b = int((sys.argv)[3])
-    if lenArg != 4:
+    if lenArg != 3:
         print(f"Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
     if operator == "+":
