@@ -8,3 +8,5 @@ if __name__ == "__main__":
         total += arg
     if lenArg > 1:
         print("{}".format(total))
+    else:
+        print("{}".format(0))
