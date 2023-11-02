@@ -2,7 +2,8 @@
 if __name__ == "__main__":
     import sys
     from calculator_1 import add, sub, mul, div
-    lenArg = (len(sys.argv)[1:])
+    argv = sys.argv[1:]
+    lenArg = len(argv)
     operator = (sys.argv)[2]
     a = int((sys.argv)[1])
     b = int((sys.argv)[3])
