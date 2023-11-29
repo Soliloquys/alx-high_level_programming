@@ -1,4 +1,2 @@
-#!/usr/bin/python3
 def magic_string():
-    n = "Best School"
-    return n
+    return ', '.join('BestSchool' * i for i in range(1, 11))
