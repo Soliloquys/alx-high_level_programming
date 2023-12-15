@@ -23,19 +23,19 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        super().__int__(id)
+        super().__init__(id)
 
     @property
     def width(self):
         """Set/get the width of the Rectangle"""
         return self.__width
 
-    @width_setter
+    @width.setter
     def width(self, value):
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value <=0:
-            raise ValueError("width must be greater than 0")
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -43,12 +43,12 @@ class Rectangle(Base):
         """Set/get height of the Rectangle"""
         return self.__height
     
-    @height_setter
+    @height.setter
     def height(self, value):
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
-            raise ValueError("height must be greater than 0")
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -56,12 +56,12 @@ class Rectangle(Base):
         """Set/get the x coordinate of the Rectangle"""
         return self.__x
 
-    @x_setter
+    @x.setter
     def x(self, value):
         if type(value) != int:
             raise TypeError("x coordinate must be an integer")
-        if value <= 0:
-            raise ValueError("x coordinate must be greater than or eqaul to 0")
+        if value < 0:
+            raise ValueError("x coordinate must be >= 0")
         self.__x = value
 
     @property
@@ -69,21 +69,10 @@ class Rectangle(Base):
         """Set/get the y coordinate of the Rectangle"""
         return self.__y
 
-    @y_setter
+    @y.setter
     def y(self, value):
-         if type(value) != int:
+        if type(value) != int:
             raise TypeError("y coordinate must be an integer")
-        if value <= 0:
-            raise ValueError("y coordinate must be greater than or eqaul to 0")
+        if value < 0:
+            raise ValueError("y coordinate must be >= to 0")
         self.__y = value
-
-
-
-
-
-
-
-
-
-
-
