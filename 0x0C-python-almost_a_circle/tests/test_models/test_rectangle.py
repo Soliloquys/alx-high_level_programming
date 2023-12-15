@@ -19,3 +19,5 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(1)
 
+if __name__ == "__main__":
+    unittest.main()
